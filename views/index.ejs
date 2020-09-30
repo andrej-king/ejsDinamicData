@@ -3,9 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>What Day Is It Today?</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <h1>What day is it Today?</h1>
-    <p><%= kindOfDay %></p>
+    
+    <% if(kindOfDay === 'Workday') { %>
+        <h2 style="color: blue">
+            <%= kindOfDay %>
+        </h2>
+    <% } else { %>
+        <h2 style="color: green">
+        <% kindOfDay %>
+        </h2>
+    <% } %>
+    <!-- <p><%= kindOfDay %></p> -->
+    
+    <table>
+        <tr>
+            <th>Fist Name</th>
+            <td><%= person.firstName %></td>
+        </tr>
+        <tr>
+            <th>Last Name</th>
+            <td><%= person.lastName %></td>
+        </tr>
+        <tr>
+            <th>Age</th>
+            <td><%= person.age %></td>
+        </tr>
+        <tr>
+            <th>Job</th>
+            <td><%= person.job %></td>
+        </tr>
+    </table>
 </body>
 </html>
